@@ -1,0 +1,105 @@
+@use "@angular/material" as mat;
+
+html {
+  @include mat.theme(
+    (
+      typography: Roboto,
+    )
+  );
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-progress-spinner {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- CASTOMIZED MATERIAL STYLES: Black & White Theme ---------- */
+
+/* Select options */
+.mat-mdc-option {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.mat-mdc-option:hover:not(.mat-mdc-selected),
+.mat-mdc-option.mat-mdc-option-active:not(.mat-mdc-selected) {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  color: #fff !important;
+}
+
+/* Text inside option */
+.mat-mdc-option .mdc-list-item__primary-text {
+  color: inherit !important;
+}
+
+/* Selected option */
+.mat-mdc-option.mat-mdc-selected {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.mat-mdc-option.mat-mdc-selected .mdc-list-item__primary-text {
+  color: #fff !important;
+}
+
+/* Checkbox inside selected option */
+.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Form fields */
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-outline-color: #000;
+  --mdc-outlined-text-field-hover-outline-color: #000;
+  --mdc-outlined-text-field-focus-outline-color: #000;
+  --mdc-outlined-text-field-input-text-color: #000;
+  --mat-mdc-form-field-label-text-color: #000;
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-notched-outline {
+  border-color: #000 !important;
+}
+
+.mat-mdc-form-field-infix input {
+  color: #000 !important;
+}
+
+.mat-mdc-form-field-error {
+  color: #d32f2f !important;
+}
+
+.snackbar-success {
+  background-color: #4caf50 !important; // зелёный
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.snackbar-error {
+  background-color: #f44336 !important; // красный
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.snackbar-info {
+  background-color: #2196f3 !important; // синий
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.snackbar-warning {
+  background-color: #ff9800 !important; // оранжевый (удаление)
+  color: #fff !important;
+  font-weight: 500;
+}
